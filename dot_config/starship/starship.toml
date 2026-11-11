@@ -1,0 +1,52 @@
+format = """
+$directory\
+[](fg:dark-cyan bg:dark-purple)\
+$git_branch\
+[](fg:dark-purple)\
+$fill\
+
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$bun\
+$java\
+$kotlin\
+$python\
+
+$line_break\
+$shell
+"""
+
+palette = "extras"
+
+[palettes.extras]
+dark-cyan	= "#4166a3"
+dark-purple	= "#8f49a3"
+
+
+[shell]
+disabled = false
+fish_indicator = "°"
+zsh_indicator = "~z~"
+bash_indicator = "#!>"
+unknown_indicator = "#!>"
+style = "green bold"
+format = "[ $indicator]($style) "
+
+
+[directory]
+truncation_length = 3
+truncation_symbol = ".../"
+style = "bg:dark-cyan bold fg:white bold"
+format = "[ $path ]($style)"
+
+[git_branch]
+style = "bg:dark-purple bold fg:white bold"
+format = "[ $symbol$branch ]($style)"
+
+
+[python]
+symbol = ' '
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'

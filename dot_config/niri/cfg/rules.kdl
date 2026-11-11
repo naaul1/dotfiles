@@ -1,0 +1,34 @@
+    window-rule {
+        geometry-corner-radius 0 // Set every window radius to 0
+        clip-to-geometry true
+    }
+
+     // if you use steam you will probably like these
+    window-rule {
+        match app-id="steam"
+        exclude title=r#"^[Ss]team$"#
+        open-floating false
+        open-focused false
+    }
+    
+    window-rule {
+       match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+       default-floating-position x=10 y=10 relative-to="bottom-right"
+       open-focused false
+    }
+
+	// reduce opacity of unfocused windows
+    window-rule {
+		match is-focused=false
+		opacity 0.8
+    }
+
+    window-rule {
+        match app-id="at.yrlf.wl_mirror"
+        opacity 1.0
+    }
+
+    layer-rule {
+        match namespace="^noctalia-wallpaper*"
+        place-within-backdrop true
+    }
