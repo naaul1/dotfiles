@@ -9,8 +9,8 @@ border_width = 2
 # https://docs.noctalia.dev/umbriel/appearance/
 #
 [appearance.blur]
+radius = 5
 
-radius = 3
 
 # Optional title bar with modifier-free dragging and floating frame resizing.
 # [appearance.title_bar]

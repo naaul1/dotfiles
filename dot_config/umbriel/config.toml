@@ -29,7 +29,7 @@ files = []
 # https://docs.noctalia.dev/umbriel/configuration/#general
 #
 [general]
-autostart = ["noctalia", "alacritty"]
+autostart = ["noctalia"]
 # xwayland = false
 # Sharp X11 apps and games on scaled outputs; they see physical resolutions.
 # xwayland_native_resolution = true
@@ -121,7 +121,7 @@ default_extent_fraction = 0.5
 # Animation: https://docs.noctalia.dev/umbriel/animation/
 [hot_corners.top_left]
 enabled = true
-delay_ms = 500
+delay_ms = 200
 action = "overview-open"
 
 # Window-rule opacity and blur fade on focus changes by default. Disable this
